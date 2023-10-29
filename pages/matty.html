@@ -34,7 +34,7 @@
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<a class="dropdown-item" href="../pages/tireni.html">Sports</a>
 						<a class="dropdown-item" href="../pages/matthew.html">Robotics and Automation</a>
-						<a class="dropdown-item" href="../pages/matty.html">Matty's Page here *TODO*</a>
+						<a class="dropdown-item" href="../pages/matty.html">Digital Reconstruction</a>
 					</div>
 				</li>
 			</ul>
@@ -43,45 +43,76 @@
 
 	<!-- Contents Template -->
 	<main role="main" class="container pb-5">
-		<h1 class="mt-5">Lorem Ipsum <span class="badge badge-secondary">By Matty</span></h1>
+		<h1 class="mt-5">Digital Reconstruction <span class="badge badge-secondary">By Matty</span></h1>
 		<p class="lead">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis perspiciatis, illo eveniet nemo ipsam
-			error distinctio officiis dolor consequatur facilis placeat saepe, hic blanditiis doloribus aut aspernatur!
-			Illum, nisi incidunt.
+			Creating digital reconstructions of the world around us has become vital in many different fields, including
+			medicine, scientific research, engineering, geography, and even gaming and TV. Modern techniques allow 3D
+			models and accurate measurements to be taken from just a set of images, and can even be used to synthesize
+			completely novel views of digital scenes, sometimes much faster and more accurately than traditional
+			rendering.
 		</p>
-		<h3 class="mt-3">Sed volutpat</h3>
+
+		<h3 class="mt-3">Photogrammetry</h3>
+		<img src="../assets/photogrammetry.jpeg" class="w-75 rounded mx-auto d-block" alt="Photogrammetry">
 		<p class="lead">
-			Sed volutpat orci et porttitor malesuada. Nullam lectus leo, pulvinar ut libero eget, interdum iaculis
-			odio. Maecenas pulvinar lobortis elit vitae sollicitudin. Aenean accumsan nulla vitae ligula molestie
-			dapibus. Donec imperdiet, felis ut bibendum vulputate, quam massa volutpat ligula, id rhoncus massa
-			libero non tortor. Donec tempor tortor quis auctor imperdiet. Maecenas at luctus libero, eget tincidunt
-			enim. Duis malesuada et lorem a vehicula.
+			Photogrammetry is the process of reconstructing an accurate 3D model of a real world object from just 2D
+			images. This can produce exceptionally detailed and accurate models, perfect for use in simulation, CGI, and
+			scientific work. Of particular note, using this technique can eliminate the need for hand-modelling many
+			models which are tricky to make in traditional ways. This allows gaming and VFX studios to produce better
+			quality models for less cost, benefitting consumers and allowing virtual worlds come to life.
 		</p>
-		<img src="../assets/Example.png" class="rounded mx-auto d-block" alt="Example">
-		<h3 class="mt-3">Donec</h3>
+
+		<h3 class="mt-3">NeRFs</h3>
+		<div class="w-75 mx-auto embed-responsive embed-responsive-4by3">
+			<iframe class="embed-responsive-item" src="../assets/nerf.mp4" allowfullscreen></iframe>
+		</div>
 		<p class="lead">
-			Donec nec nisl id augue rutrum scelerisque. Cras porttitor, augue id fringilla semper, ante mi
-			vestibulum lorem, semper imperdiet nulla felis hendrerit mi. Pellentesque molestie, turpis vel
-			rutrum elementum, tellus orci faucibus lacus, lobortis volutpat leo libero in mi. Sed rhoncus vitae
-			elit accumsan bibendum. Duis eu porta nisl. Fusce id pretium eros. Etiam a finibus libero. Vivamus
-			sollicitudin vel mauris ac porttitor. Duis auctor ligula ut urna porttitor, quis ullamcorper tortor
-			porttitor. Mauris rhoncus, odio sit amet pulvinar tristique, urna nunc porttitor sapien, nec dictum
-			purus mi sit amet neque. Sed nec semper metus. Nunc congue enim ultrices feugiat vulputate.
-			Phasellus odio metus, ultrices ut pharetra imperdiet, fermentum eu orci. Orci varius natoque
-			penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin eu fermentum quam, eu
-			placerat est. Curabitur at sem a sapien fringilla fringilla.
+			Shifting the focus away from <em>model</em> synthesis, and towards <em>view</em> synthesis, enter NeRFs.
+			Neural Radiance Fields (NeRFs) are a tecnique developed in 2020 by a team at Berkeley that use neural
+			networks to synthesize new views of a scene, using just a handful of images. Since the original paper, the
+			technique has been developed and improved in several follow up works. NeRFs are not only able to simulate
+			the shape and texture of the environment, but also complicated lighting and reflective changes too, making
+			them capable of producing results more realistic than almost any other technique.
 		</p>
+
+		<p class="lead">
+			Because they are so new, NeRFs are yet to see many concrete applications in the real world, however the
+			future could see this technique implemented into smartphone photography, virtual tours, gaming and more.
+		</p>
+
+		<h3 class="mt-3">Gaussian Splatting</h3>
+		<div class="w-75 mx-auto embed-responsive embed-responsive-16by9">
+			<iframe class="embed-responsive-item" src="../assets/gaussian.mp4" allowfullscreen></iframe>
+		</div>
+		<p class="lead">
+			Gaussian Splatting is a very modern technique, being unveiled in August 2023. It promises to revolutionalize
+			view synthesis, and possibly all computer rendering in general. While it aims to tackle the same problem as
+			NeRFs, it uses a different approach. Unlike NeRF, gaussian splatting is a <em>hand crafted</em> algorithm,
+			meaning it uses no neural networks or machine learning of any kind. Instead, gaussian splatting recomstructs
+			the scene with an iterative algorithm, building the scene, not from geometry, but from <em>gaussians</em>.
+			These are 3D distributions that can be stretched and recoloured, allowing them to reconstruct very fine
+			details. The use of gaussians also allows the scene to be rendered incredibly quickly on the GPU, much
+			faster than real-time.
+		</p>
+
+		<p class="lead">
+			With such incredible results, calculated an unprecedented speeds, gaussian splatting is sure to
+			revolutionalize computer graphics for years to come.
+		</p>
+
 
 		<div class="card">
 			<div class="card-header">
 				About the Author
-				<a href="#" class="btn btn-primary btn-sm mx-1 float-right">LinkedIn</a>
-				<a href="#" class="btn btn-primary btn-sm float-right">Github</a>
+				<a href="https://www.linkedin.com/in/mattymuir" class="btn btn-primary btn-sm mx-1 float-right">LinkedIn</a>
+				<a href="https://github.com/MattyMuir" class="btn btn-primary btn-sm float-right">Github</a>
 			</div>
 			<div class="card-body">
-				<h5 class="card-title">Special title treatment</h5>
-				<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-
+				<h5 class="card-title">Matty Muir</h5>
+				<p class="card-text">Matty is a student of computer science at Durham University. He has a love for
+					computer graphics, mathematical science, and high performance computing. <br>
+					After learning to code when he was young, matty has worked on many personal projects, mostly written in the language C++. His work has a clear focus on performance, especially in mathematical contexts. This includes a graphing calculator, Euclid Numbers searcher, and a Rubik's Cube simulator.
+				</p>
 			</div>
 		</div>
 	</main>
